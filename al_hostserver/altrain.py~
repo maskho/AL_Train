@@ -23,7 +23,7 @@ outer_loop_process = None
 # ctat_thread = Nones
 calling_dir = None
 CONFIG_DEFAULT = "altrain.conf"
-HOST_DOMAIN = '0.0.0.0'  # Use this instead of localhost on windows
+HOST_DOMAIN = '127.0.0.1'  # Use this instead of localhost on windows
 
 # Allows the host server to fetch above its working directory using
 #  special "!u" in place of "..". This this environment variable is
