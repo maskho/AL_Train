@@ -8,18 +8,18 @@ var deep_equal = require('fast-deep-equal');
 // import { useMachine } from '@xstate/react';
 
 
-var text_by_mode = {"choose_foci": "Select any interface elements that were used to compute this result.",
-                    "set_start": "Set the start state.",
+var text_by_mode = {"choose_foci": "Pilih kotak yang digunakan untuk perhitungan yang baru saja anda masukkan.",
+                    "set_start": "Atur problem permulaan.",
                     "press_next": "Press next to continue.",
-                    "demonstrate" : "Demonstrate the next step."
+                    "demonstrate" : "Peragakan satu langkah selanjutnya. Lalu tekan Enter."
                     }
 
 // function gen_query_text(){
-//   let h = <Text style={{"color":"darkorchid",'textShadowRadius':3, 'textShadowColor': "darkorchid"}}>{"highlighted"}</Text>
-//   return ["Or specify if the ", h ," input is correct for the next step."]
+//   let h = <Text style={{"color":"darkorchid",'textShadowRadius':3, 'textShadowColor': "darkorchid"}}>{"kotak yang ditandai"}</Text>
+//   return ["Atau tentukan jika ", h ," benar untuk langkah selanjutnya."]
 // }
-var h = <Text style={{"color":"darkorchid",'textShadowRadius':3, 'textShadowColor': "darkorchid"}}>{"highlighted"}</Text>
-var query_text = ["Or specify if the ", h ," input is correct for the next step."]
+var h = <Text style={{"color":"darkorchid",'textShadowRadius':3, 'textShadowColor': "darkorchid"}}>{"kotak yang ditandai"}</Text>
+var query_text = ["Atau tentukan jika ", h ," benar untuk langkah selanjutnya."]
 
 
 class Buttons extends Component{
@@ -63,13 +63,13 @@ class Buttons extends Component{
             <View style={styles.button_wrapper1}>
               <Text style={styles.prompt1}> 
               {matches("Setting_Start_State") &&
-               "Set the start state."}
+               "Atur problem permulaan."}
               {(matches("Waiting_User_Feedback")  || matches({"Waiting_User_Feedback":"Waiting_Yes_No_Feedback"})) &&
-               "Demonstrate the next step."}
+               "Peragakan satu langkah selanjutnya. Lalu tekan Enter."}
               {matches("Explantions_Displayed") &&
                "Press next to continue. Or demonstrate the next step."}
               {matches("Waiting_Select_Foci") &&
-               "Select any interface elements that were used to compute this result."}
+               "Pilih kotak yang digunakan untuk perhitungan yang baru saja anda masukkan."}
               {matches("Waiting_User_Attempt") &&
                "TUTOR MODE"}
               
@@ -92,7 +92,7 @@ class Buttons extends Component{
               {matches("Setting_Start_State") &&
               <TouchableHighlight style={styles.startstate_button} underlayColor="#CCCCCC"
                                 onPress={ ()=> send("START_STATE_SET")}>
-               <Text style={styles.startstate_button_text}>{"Start State Done"}</Text>
+               <Text style={styles.startstate_button_text}>{"Selesai Diatur"}</Text>
               </TouchableHighlight>
               }
             </View>
@@ -105,7 +105,7 @@ class Buttons extends Component{
               <Text style={styles.prompt2}> 
               {matches({"Waiting_User_Feedback":"Waiting_Yes_No_Feedback"}) && query_text}
               {matches({"Waiting_User_Feedback":"Waiting_Submit_Feedback"}) &&
-                "Or press submit to send the feedback from the skill panel."}
+                "Atau tekan tombol submit untuk mengajukan masukan dari skill panel."}
               </Text>
               {matches({"Waiting_User_Feedback":"Waiting_Yes_No_Feedback"}) &&
               <View style={styles.yes_no}>

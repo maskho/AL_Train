@@ -40,7 +40,8 @@ if(not os.path.exists(build_dir)): build_dir = release_dir
 
 colorama.init(autoreset=True)
 
-HOST_DOMAIN = '0.0.0.0' #Use this instead of localhost on windows
+HOST_DOMAIN = '127.0.0.1' #Use this instead of localhost on windows
+#HOST_DOMAIN = '0.0.0.0' #Use this for ec2
 # PORT = 8000
 post_queue = Queue(maxsize=0)
 write_queue = Queue(maxsize=0)

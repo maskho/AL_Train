@@ -796,7 +796,7 @@ function send_training_data(sai_data) {
 
 function query_user_startstate(){
 
-    // document.getElementById("prompt_text").innerHTML = "Set the start state."
+    // document.getElementById("prompt_text").innerHTML = "Atur problem permulaan."
     // _hide_all(except=["startstate_done_button"]);
     // document.getElementById("startstate_button").setAttribute("class", "startstate_button");
 
@@ -826,7 +826,7 @@ function query_user_demonstrate(skills_applicable=false){
     }
     
     clear_highlights();
-    // document.getElementById("prompt_text").innerHTML = "Demonstrate the next step."
+    // document.getElementById("prompt_text").innerHTML = "Peragakan satu langkah selanjutnya. Lalu tekan Enter."
     // _hide_all();
     
     iframe_content.document.addEventListener(CTAT_ACTION, handle_user_example); 
@@ -860,7 +860,7 @@ function query_user_example(){
 
 function query_user_foci(){
     clear_highlights();
-    // document.getElementById("prompt_text").innerHTML = "Select any interface elements that were used to compute this result."
+    // document.getElementById("prompt_text").innerHTML = "Pilih kotak yang digunakan untuk perhitungan yang baru saja anda masukkan."
     // document.getElementById("yes_button").setAttribute("class", "hidden");
     // document.getElementById("no_button").setAttribute("class", "hidden");
     // document.getElementById("next_button").setAttribute("class", "next_button");
