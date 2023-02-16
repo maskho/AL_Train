@@ -105,7 +105,7 @@ class Buttons extends Component{
               <Text style={styles.prompt2}> 
               {matches({"Waiting_User_Feedback":"Waiting_Yes_No_Feedback"}) && query_text}
               {matches({"Waiting_User_Feedback":"Waiting_Submit_Feedback"}) &&
-                "Atau tekan tombol submit untuk mengajukan masukan dari skill panel."}
+                "Atau tekan tombol submit untuk mengajukan masukan dari panel Applicable Skills."}
               </Text>
               {matches({"Waiting_User_Feedback":"Waiting_Yes_No_Feedback"}) &&
               <View style={styles.yes_no}>
